@@ -2,7 +2,7 @@
 
 Just a standard, generated phoenix application, trying to use :geo_postgis, latest release, with elixir 1.15.5 OTP 26.0.2
 
-This project doesn't compile, yelling:
+This project doesn't compile, complaining:
 ```
 == Compilation error in file lib/hello_gis/geom/geom_check.ex ==
 ** (ArgumentError) unknown type Geo.PostGIS.Geometry for field :geom
@@ -10,6 +10,11 @@ This project doesn't compile, yelling:
     (ecto 3.10.3) lib/ecto/schema.ex:1931: Ecto.Schema.__field__/4
     lib/hello_gis/geom/geom_check.ex:7: (module)
 ```
+## The Solution for geo_postgis using with elixir 1.15
+
+Update `geo_postgis` to at least version 3.4.4, thx to [Tyler A. Young](https://github.com/s3cur3/s3cur3) for ultra-fast response and fixing.  
+
+---
 To start your Phoenix server:
 
   * Run `mix setup` to install and setup dependencies
